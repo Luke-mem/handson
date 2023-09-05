@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handson 06</title>
+</head>
+<body>
+
+    <!--Desafio: leia um número qualquer e mostre se ele é par ou impar/
+    
+            ler o número
+        verificar se ele é par (operador mod - resto da divisão)
+        %
+    -->
+    <h1 style="color: rgb(210, 117, 223);">Handson 06</h1>
+    <p>Par ou Impar!
+    </p>
+    Digite qualquer número: <input type="text"  id="numero">
+    <button onclick="PI()">Verificar</button>
+
+    <script>
+
+        function PI(){
+            var numero = document.getElementById("numero").value
+            if(numero % 2 == 0){
+                alert("O número " + numero + " é par pois o resto é 0.")
+            }else{
+                alert("Há resto na divisão, portanto o número " + numero + " é ímpar.")
+            }
+
+        }
+        
+    
+    </script>
+</body>
+</html>

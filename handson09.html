@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handson 09</title>
+</head>
+<body>
+    <!--Criar um algoritmo para calcular baskhara!-->
+
+    <h1 style="color: rgb(28, 169, 194);">Handson 09</h1>
+
+    <p>Calcular Bhaskara! (-b ± √Δ) / 2 <br> 
+        
+        Leva como consideração a equação do 2°grau: ax²+bx+c=0 e Δ=b²-4*a*c </p>
+
+    Digite o valor de a: <input type="number"  id="a"><br>
+    Digite o valor de b: <input type="number"  id="b"><br>
+    Digite o valor de c: <input type="number"  id="c">
+
+    <button onclick="bhaskara()">Calcular</button>
+
+    <script>
+        function bhaskara(){
+            var a = parseFloat(document.getElementById("a").value)
+            var b = parseFloat(document.getElementById("b").value)
+            var c = parseFloat(document.getElementById("c").value)
+            var delta = (b*b) - (4*a*c)
+            var x1 = (-b + Math.sqrt(delta)) / (2*a)
+
+
+            var x2 = (-b - Math.sqrt(delta)) / (2*a)
+            
+
+            var r0 = (-b) / (2*a)
+            
+            
+            if(delta < 0){
+                alert("Valor de delta: " + delta + " Para delta negativo não há raizes reais")
+
+            }else if(delta > 0){
+                alert("Valor de delta: " + delta + " Sendo positivo temos duas raizes reais: " + x1 + " e " + x2 + ".")
+
+            }else/*(delta = 0)*/{
+                alert("Valor de delta sendo zero temos uma raíz real: " + r0 + ".")
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

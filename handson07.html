@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handson 07</title>
+</head>
+<body>
+
+    <h1 style="color: rgb(210, 117, 223);">Handson 07</h1>
+
+    <p>Média das notas!</p>
+
+    Digite a primeira nota: <input type="number"  id="nota1">
+    Digite a segunda nota: <input type="number"  id="nota2">
+    <button onclick="media()">Calcular</button>
+
+    <script>
+        function media(){
+            var nota1 = parseInt(document.getElementById("nota1").value)
+            var nota2 = parseInt(document.getElementById("nota2").value)
+            var media = (nota1+nota2)/2
+            
+            alert("A primeira nota é " + nota1 + " ,a segunda nota é " + nota2 + 
+            " ,a média é " + (media) + ".")
+            if(media >= 7){
+                alert("O aluno foi APROVADO.")
+            }else{
+                alert("O aluno foi REPROVADO.")
+            }
+        }
+
+    </script>
+
+    
+</body>
+</html>
